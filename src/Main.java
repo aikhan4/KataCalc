@@ -39,7 +39,7 @@ public class Main {
         return operator.equals("+") | operator.equals("-") | operator.equals("*") | operator.equals("/");
     }
     public static String calc(String input) throws ArithmeticException {
-        if ((input.length() - input.replace(String.valueOf(' '), "").length()) == 2) {
+        if ((input.length() - input.replace(" ", "").length()) == 2) {
             String[] arrayWords = input.split(" ");
             if (isArabianNumber(arrayWords[0])) {
                 if (isOperator(arrayWords[1])) {
